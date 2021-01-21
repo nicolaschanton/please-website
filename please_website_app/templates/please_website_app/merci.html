@@ -1,0 +1,18 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Bravo ! {% endblock title %}
+
+{% block content %}
+
+    <section id="intro">
+        <div class="intro-content bckg-blue-400 padding-bottom-50 padding-top-50">
+            <h1>Merci, votre demande a bien été traîtée !</h1>
+            <h3>" {{ quote.quote }} "</h3>
+            <h3 class="text-right">{{ quote.author }}</h3>
+            <div class="padding-bottom-50">
+                <a href="/home" class="primary-btn">Retour à l'accueil</a>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

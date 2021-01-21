@@ -1,0 +1,95 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Bienvenue {% endblock title %}
+
+{% block content %} {% load static %}
+
+
+    <section id="intro">
+        <div class="intro-content bckg-home">
+            <h1>D&eacute;veloppez Please dans votre ville !</h1>
+            <h3>D&eacute;ployez Please, r&eacute;f&eacute;rencez les commerces et restaurants de votre ville et touchez une commission sur toutes les ventes.</h3>
+            <div>
+                <a href="/city_manager" class="primary-btn">Les avantages de Please</a>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="margin-top-main">
+
+      <section id="categories" class="padding-bottom-100">
+        <div class="container">
+        <h1>Les restaurants et commerces dans votre poche !</h1>
+          <div class="row">
+              {% for category in categories %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="white-div">
+                  <a href="https://pleaseapp.com" target="_blank">
+                <img src="{{ category.image.url }}" alt="">
+                <p>{{ category.name }}</p>
+                  </a>
+              </div>
+            </div>
+              {% endfor %}
+          </div>
+        <div class="row">
+            <div class="div-btn padding-top-20">
+                  <a href="http://onelink.to/pleaseapp" class="primary-btn" target="_blank">T&eacute;l&eacute;chargez Please</a>
+                  <a href="https://pleaseapp.com" class="secondary-btn" target="_blank">Commandez en ligne</a>
+            </div>
+        </div>
+        </div>
+      </section>
+
+
+        {% block cta %}
+            {% include "please_website_app/cta2.html" %}
+        {% endblock cta %}
+
+
+        <section id="intro">
+            <div class="intro-content padding-top-50">
+                <div class="row carousel-grey">
+                    {% for top_article in top_articles %}
+                    <div class="col-lg-2 col-md-4 col-sm-4 padding-bottom-10">
+                        <a href="{{ top_article.link }}" target="_blank">
+                            <img src="{{ top_article.logo_grey.url }}">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+          </section>
+
+        <section id="cta-city">
+            <div class="container padding-top-50 padding-bottom-100">
+                <h1>Commer&ccedil;ant ou livreur ?</h1>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_RESTAURANT.png' %}">
+                            <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_POMME.png' %}">
+                            <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_FER-A-REPASSER.png' %}">
+                            <h2>Proposez vos produits et services sur Please</h2>
+                            <p>Créez gratuitement votre offre digitale, augmentez votre périm&agrave;tre clientèle, et bénéficiez d’un service de livraison intégré.</p>
+                            <p><a href="/commercants">Voir l’offre commer&ccedil;ant</a></p>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_VELO.png' %}">
+                            <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_TRIPORTEUR.png' %}">
+                            <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_VOITURE.png' %}">
+                            <h2>Faites des livraisons Please et augmentez vos revenus</h2>
+                            <p>Livrez quand vous le souhaitez, restez indépendant et augmentez vos revenus.</p>
+                            <p><a href="/livreurs">Voir l’offre livreur</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    </main>
+
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends "please_website_app/base_site_app.html" %}
+
+{% block title %} Nouveau Commerce {% endblock title %}
+
+{% block content %}
+
+    <section id="intro">
+        <div class="intro-content bckg-green-400">
+            <h1>{{ candidate.first_name }} - Ajoutez un Commerce</h1>
+            <h3 class="text-white">Merci de renseigner ces quelques informations concernant le commerce que vous avez référencé.
+             Ceci vous sera extrêmement utile lors de l'ouverture de votre business Please afin d'assurer une offre assez riche
+                et diversifiée à vos premiers clients !</h3>
+        </div>
+    </section>
+
+    <main id="main">
+
+        <section id="city-analysis" class="padding-bottom-50">
+            <div class="container">
+                <form method="POST">
+                    <div class="row">
+                        {% for field in form_merchant %}
+                            {% csrf_token %}
+                            <div class="col-lg-4 col-md-6 col-sm-12 div-input">
+                                {{ field.label_tag }}
+                                {{ field }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <button type="submit">Enregistrer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+{% endblock content %}

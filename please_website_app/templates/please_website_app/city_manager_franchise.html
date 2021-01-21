@@ -1,0 +1,272 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} City Manager {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+  <section id="intro">
+    <div class="intro-content bckg-cm">
+        <h1>Ouvrez une franchise Please dans votre ville !</h1>
+        <h3>Démarrez avec un faible apport, touchez automatiquement une commission sur toutes les ventes.</h3>
+
+        <div class="row carousel-intro">
+            {% for top_article in top_articles %}
+            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
+                <a href="{{ top_article.link }}" target="_blank">
+                    <img src="{{ top_article.logo_white.url }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="padding-top-10">
+            <a href="/devenir_cm" class="primary-btn">Devenir City Manager</a>
+        </div>
+    </div>
+  </section>
+
+    <main id="main">
+
+        <section id="ccm-no-bckg">
+            <br>
+            <div class="container">
+                <h1>Comment ça marche ?</h1>
+                <h3>Proposez une vitrine digitale et une solution de livraison aux commercants de votre ville et touchez automatiquement une commission sur chaque commande</h3>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle1-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>Commerce</b></p>
+                                <p>Construisez l'offre digitale de la ville avec vos commerçants.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle2-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>Livraison</b></p>
+                                <p>Assurez et suivez les livraisons pour vos commerçants partenaires.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle3-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>Animation</b></p>
+                                <p>Développez l'économie collaborative avec les associations et la Collectivité.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+        <section id="advantages">
+            <div class="container">
+                <h1>L’avantage d'un business Please</h1>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/rose-plein-rond_CHRONOMETRE.png' %}">
+                            </div>
+                            <div>
+                                <h2>Un business automatisé</h2>
+                                <p>Une fois les offres des commerçants en place, chaque commande passée par l’app génère automatiquement une commission pour vous.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/outremer-plein-rond_MOBILE.png' %}">
+                            </div>
+                            <div>
+                                <h2>Prendre la vague</h2>
+                                <p>Les nouveaux usages et modèles de consommation se développent avec les outils digitaux... Prenez part à cette nouvelle économie !</p>
+                            </div>
+                        </div>
+
+                         <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_EUROS.png' %}">
+                            </div>
+                            <div>
+                                <h2>Revenus immédiats</h2>
+                                <p>Notre solution éprouvée dans plusieurs villes en France vous assure un revenu dès le premier mois d'activité.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_BONHOMME.png' %}">
+                            </div>
+                            <div>
+                                <h2>Indépendance</h2>
+                                <p>Vous avez toujours rêvé d'être votre propre patron ? Please vous permet de réaliser ce rêve en quelques semaines à peine !</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/jaune-plein-rond_VERROU.png' %}">
+                            </div>
+                            <div>
+                                <h2>Zéro risque</h2>
+                                <p>Les Apps client, commerçant et livreur vous sont fournies clés en main. Créez votre structure, suivez les formations Please et transport et c'est parti !</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/violet-plein-rond_POI.png' %}">
+                            </div>
+                            <div>
+                                <h2>Jouer à domicile</h2>
+                                <p>Vous pouvez faire jouer votre réseau et capitaliser sur votre connaissance de la ville. Et quoi de plus agréable que de travailler près de chez soi ?!</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </section>
+
+        <section id="ccm-bckg" class="bckg-green-490">
+            <div class="container">
+                <h1>Comment devenir City Manager ?</h1>
+                <h3>Nous sélectionnons des partenaires qui souhaitent créer une entreprise à fort potentiel de croissance, sans développer et maintenir une solution technique complexe. Nos entrepreneur(e)s se concentrent à 100% sur le développement de leur business.</h3>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle1-blanc.png' %}">
+                            </div>
+                            <div>
+                                <p><b>Inscrivez vous</b></p>
+                                <p>Répondez à notre questionnaire pour mieux vous connaître.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle2-blanc.png' %}">
+                            </div>
+                            <div>
+                                <p><b>Rencontrez nous</b></p>
+                                <p>Nous organisons une rencontre afin d'aligner nos ambitions.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle3-blanc.png' %}">
+                            </div>
+                            <div>
+                                <p><b>Créez votre structure</b></p>
+                                <p>Créez votre société et suivez les formations nécessaires.</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row padding-bottom-20">
+                    <div class="col-lg-12 col-md-12 col-sm-12 div-col-2">
+                         <a href="/devenir_cm" class="primary-btn">Devenir City Manager</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+        <section id="3-tables">
+            <div class="container padding-bottom-50">
+                <h1 class="padding-bottom-20">Vous hésitez encore ?</h1>
+                <h3 class="grey-dark">Comparons ensemble trois projets de vie :</h3>
+                <div>
+                    <div class="row padding-bottom-50">
+                        <div class="col-lg-4 col-md-12 col-sm-12 padding-bottom-20">
+                            <div class="focused-div">
+                                <img src="{% static 'please_website_app/img/logos/PLEASE-blanc.png' %}">
+                                <hr>
+                                <p>Mise sur le marché</p>
+                                <h3><b>Rapide</b></h3>
+                                <hr>
+                                <p>Risque</p>
+                                <h3><b>Faible</b></h3>
+                                <hr>
+                                <p>Coûts</p>
+                                <h3><b>10k€ - 20k€</b></h3>
+                                <hr>
+                                <p>Taux d'échec</p>
+                                <h3><b>Faible</b></h3>
+                                <hr>
+                                <p>Premier Chiffre d'Affaires</p>
+                                <h3><b>1 - 3 mois</b></h3>
+                                <hr>
+                                <p>Indépendance</p>
+                                <h3><b>É́levée</b></h3>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 padding-bottom-20">
+                            <div class="normal-div">
+                                <h2>Commerce franchisé</h2>
+                                <hr>
+                                <p>Mise sur le marché</p>
+                                <h3><b>Assez rapide</b></h3>
+                                <hr>
+                                <p>Risque</p>
+                                <h3><b>Moyen</b></h3>
+                                <hr>
+                                <p>Coûts</p>
+                                <h3><b>30k€ - 80k€</b></h3>
+                                <hr>
+                                <p>Taux d'échec</p>
+                                <h3><b>Très faible</b></h3>
+                                <hr>
+                                <p>Premier Chiffre d'Affaires</p>
+                                <h3><b>6 - 10 mois</b></h3>
+                                <hr>
+                                <p>Indépendance</p>
+                                <h3><b>Réduite</b></h3>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 padding-bottom-20">
+                            <div class="normal-div">
+                                <h2>Entreprendre seul(e)</h2>
+                                <hr>
+                                <p>Mise sur le marché</p>
+                                <h3><b>Très lente</b></h3>
+                                <hr>
+                                <p>Risque</p>
+                                <h3><b>Très élévé</b></h3>
+                                <hr>
+                                <p>Coûts</p>
+                                <h3><b>+50k€</b></h3>
+                                <hr>
+                                <p>Taux d'échec</p>
+                                <h3><b>Très élevé</b></h3>
+                                <hr>
+                                <p>Premier Chiffre d'Affaires</p>
+                                <h3><b>+ 3 mois</b></h3>
+                                <hr>
+                                <p>Indépendance</p>
+                                <h3><b>Totale</b></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/contact_cm" class="primary-btn">Être rappelé</a>
+                <a href="https://s3.eu-west-3.amazonaws.com/pleasewebsite/media/documents/documents_cm/document_cm.pdf" target="_blank" class="primary-btn">Télécharger la documentation</a>
+            </div>
+    </section>
+
+        {% block cta %}
+            {% include "please_website_app/cta.html" %}
+        {% endblock cta %}
+
+    </main>
+
+{% endblock content %}

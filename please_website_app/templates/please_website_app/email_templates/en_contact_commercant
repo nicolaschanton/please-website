@@ -1,0 +1,14 @@
+Contact : {{ first_name }} {{ last_name }}
+
+Email : {{ email }}
+
+Téléphone : {{ phone }}
+
+Ville : {{ city }}
+
+Nom du Commerce : {{ business_name }}
+
+Siret : {{ siret }}
+
+Message :
+{{ message|safe|striptags }}

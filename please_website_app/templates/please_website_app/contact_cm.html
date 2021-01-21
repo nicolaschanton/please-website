@@ -1,0 +1,35 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Contact {% endblock title %}
+
+{% block content %}
+
+    <main id="main">
+
+        <section id="form" class="padding-bottom-100">
+            <div class="container align-center">
+                <h1>Contactez Please</h1>
+                <h3>Nous vous répondons dans les meilleurs délais !</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <form method="POST">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form_contact.as_p }}
+                                </div>
+                                <button type="submit">Me recontacter</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% block cta %}
+            {% include "please_website_app/cta.html" %}
+        {% endblock cta %}
+
+    </main>
+
+{% endblock content %}

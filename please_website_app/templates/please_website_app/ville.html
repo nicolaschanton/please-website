@@ -1,0 +1,142 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} {{ city.name }} {% endblock title %}
+
+{% block content %}
+
+{% load static %}
+
+      <section id="intro">
+        <div class="intro-content" style="background-image:url('{{city.cover_image.url}}'); background-repeat: no-repeat; background-size: cover; min-height: 490px">
+            <h1>Please booste {{ city.name }} et sa région !</h1>
+            <h3>Please développe le commerce local et dynamise l'emploi local !</h3>
+            <div>
+                <a href="http://pleaseapp.com/#/quartier/{{ city.city_url }}" target="_blank" class="primary-btn">Commandez en ligne</a>
+            </div>
+
+        </div>
+      </section>
+
+    <main id="main">
+
+        <section id="ccm-no-bckg-cta">
+            <br>
+            <div class="container">
+                <h1>100% local, 100% humain</h1>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <img src="{{ city.cm_image.url }}" style="max-height: 180px; margin: auto; display: block; padding-bottom: 10px">
+                    </div>
+
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <h3 class="text-left">{{ city.description }}</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="ccm-no-bckg-cta">
+            <br>
+            <div class="container">
+                <h1>Les restaurants et commerces dans votre poche</h1>
+                <h3>Envie d’une pizza ou besoin d’une retouche ? Fringale de sushis ou de burgers ?
+                    Please vous livre les meilleurs restaurants et commerces de votre région.
+                    Sélectionnez votre commerce, commandez, c’est livré !
+                    Le paiement est complètement sécurisé et intervient après la livraison.</h3>
+            </div>
+        </section>
+
+      <section id="googlemaps"></section>
+        <script>
+
+          // This example creates a simple polygon representing the Bermuda Triangle.
+
+          function initMap() {
+            var map = new google.maps.Map(document.getElementById('googlemaps'), {
+              zoom: 12,
+              center: {lat: {{ center.0 }}, lng: {{ center.1 }}},
+              mapTypeId: 'terrain'
+            });
+
+            // Define the LatLng coordinates for the polygon's path.
+            var triangleCoords = [
+                {% for coordinate in coordinates %}
+                    {lat: {{ coordinate.0 }}, lng: {{ coordinate.1 }}},
+                {% endfor %}
+            ];
+
+            // Construct the polygon.
+            var bermudaTriangle = new google.maps.Polygon({
+              paths: triangleCoords,
+              strokeColor: '#FFC107',
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: '#FFC107',
+              fillOpacity: 0.35
+            });
+            bermudaTriangle.setMap(map);
+          }
+        </script>
+
+      <section id="categories" class="padding-top-100">
+        <div class="container">
+        <p><b>{{ city.name }} et sa région</b></p>
+        <h1>Une gamme complète de produits et services</h1>
+          <div class="row">
+              {% for category in categories %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="white-div">
+                  <a href="http://pleaseapp.com/#/quartier/{{ city.city_url }}" target="_blank">
+                <img src="{{ category.image.url }}" alt="">
+                <p>{{ category.name }}</p>
+                  </a>
+              </div>
+            </div>
+              {% endfor %}
+          </div>
+        <div class="row">
+            <div class="div-btn padding-top-20">
+                  <a href="http://onelink.to/pleaseapp" class="primary-btn" target="_blank">Téléchargez Please</a>
+                  <a href="https://pleaseapp.com" class="secondary-btn" target="_blank">Commandez en ligne</a>
+            </div>
+        </div>
+        </div>
+      </section>
+
+        <section id="cta-city">
+            <div class="container padding-top-50 padding-bottom-100">
+                <h1>Commerçant ou livreur ?</h1>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_RESTAURANT.png' %}">
+                            <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_POMME.png' %}">
+                            <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_FER-A-REPASSER.png' %}">
+                            <h2>Proposez vos produits et services sur Please</h2>
+                            <p>Créez gratuitement votre offre digitale, augmentez votre périmètre clientèle, et bénéficiez d’un service de livraison intégré.</p>
+                            <p><a href="/commercants">Voir l’offre commerçant</a></p>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_VELO.png' %}">
+                            <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_TRIPORTEUR.png' %}">
+                            <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_VOITURE.png' %}">
+                            <h2>Faites des livraisons Please et augmentez vos revenus</h2>
+                            <p>Livrez quand vous le souhaitez, restez indépendant et augmentez vos revenus.</p>
+                            <p><a href="/livreurs">Voir l’offre livreur</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    {% block cta %}
+        {% include "please_website_app/cta.html" %}
+    {% endblock cta %}
+
+    </main>
+
+{% endblock content %}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118328358-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118328358-1');
+  gtag('config', 'AW-830537670');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '261368947827300');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=261368947827300&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+{% load static %}
+    {% block head %}
+
+        {% block meta %}
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+            <meta content="Déployez Please, référencez les commerces et restaurants de votre ville et touchez une commission sur toutes les ventes." name="description">
+            <meta content="please, pleaseapp, localtech, livraison à domicile, commerce local" name="keywords">
+        {% endblock meta %}
+
+        <title>{% block title %}{% endblock %} | Please</title>
+
+
+        {% block stylesheets %}
+            <!-- Favicons -->
+            <link href="{% static 'please_website_app/img/favicon/favicon.ico' %}" rel="icon" type="image/png">
+
+            <!-- Google Fonts -->
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,700" rel="stylesheet">
+
+            <!-- Bootstrap CSS File -->
+            <link href="{% static 'please_website_app/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+            <!-- Libraries CSS Files -->
+            <link href="{% static 'please_website_app/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+            <link href="{% static 'please_website_app/lib/animate/animate.min.css' %}" rel="stylesheet">
+            <link href="{% static 'please_website_app/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+            <link href="{% static 'please_website_app/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+
+            <!-- Main Stylesheet File -->
+            <link href="{% static 'please_website_app/css/header.css' %}" rel="stylesheet">
+            <link href="{% static 'please_website_app/css/footer.css' %}" rel="stylesheet">
+            <link href="{% static 'please_website_app/css/general.css' %}" rel="stylesheet">
+            <link href="{% static 'please_website_app/css/fonts.css' %}" rel="stylesheet">
+            <link href="{% static 'please_website_app/css/sections.css' %}" rel="stylesheet">
+
+        {% endblock stylesheets %}
+
+    {% endblock head %}
+</head>
+
+<body id="body"><div id="preloader"></div>
+    {% block body %}
+
+        {% block content %}
+            <!-- Content -->
+        {% endblock content %}
+
+        {% block javascripts %}
+            <!-- JavaScript Libraries -->
+            <script src="{% static 'please_website_app/lib/jquery/jquery.min.js' %}"></script>
+            <script src="{% static 'please_website_app/lib/jquery/jquery-migrate.min.js' %}"></script>
+            <script src="{% static 'please_website_app/lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+            <script src="{% static 'please_website_app/lib/easing/easing.min.js' %}"></script>
+            <script src="{% static 'please_website_app/lib/superfish/hoverIntent.js' %}"></script>
+            <script src="{% static 'please_website_app/lib/superfish/superfish.min.js' %}"></script>
+            <script src="{% static 'please_website_app/lib/wow/wow.min.js' %}"></script>
+            <script src="{% static 'please_website_app/lib/sticky/sticky.js' %}"></script>
+
+            <!-- Template Main Javascript File -->
+            <script src="{% static 'please_website_app/js/main.js' %}"></script>
+        {% endblock %}
+
+    {% endblock body %}
+  </body>
+</html>

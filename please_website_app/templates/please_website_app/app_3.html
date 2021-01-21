@@ -1,0 +1,76 @@
+{% extends "please_website_app/base_site_app.html" %}
+
+{% block title %} Mon Espace Candidat {% endblock title %}
+
+{% block content %}
+
+    <section id="intro">
+        <div class="intro-content bckg-blue-400">
+            <h1>{{ candidate.first_name }} | Votre Espace Candidat</h1>
+            <h3 class="text-white">Pour faciliter la prise de contact avec notre équipe, nous allons vous guider dans l'étude de votre zone de chalandise et vous demander quelques informations sur votre projet et votre profil.</h3>
+            <h3 class="text-white">Merci et bon courage !</h3>
+        </div>
+    </section>
+
+    <main id="main">
+
+        <section id="progress-bar" class="margin-section">
+            <div class="container">
+
+                <div class="row bs-wizard">
+
+                    <div class="col-lg-4 bs-wizard-step complete">
+                      <div class="text-center bs-wizard-stepnum">1 - Je parle de mon projet</div>
+                      <div class="progress"><div class="progress-bar"></div></div>
+                      <a href="/app" class="bs-wizard-dot"></a>
+                    </div>
+
+                    <div class="col-lg-4 bs-wizard-step complete">
+                      <div class="text-center bs-wizard-stepnum">2 - J'analyse ma ville</div>
+                      <div class="progress"><div class="progress-bar"></div></div>
+                      <a href="/app_2" class="bs-wizard-dot"></a>
+                    </div>
+
+                    <div class="col-lg-4 bs-wizard-step active">
+                      <div class="text-center bs-wizard-stepnum">3 - Je parle de mon parcours</div>
+                      <div class="progress"><div class="progress-bar"></div></div>
+                      <a href="/app_3" class="bs-wizard-dot"></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="curriculum-analysis">
+            <div class="container">
+            <h1 class="padding-bottom-20">Je parle de mon parcours</h1>
+                <form method="POST">
+                    <div class="row">
+                        {% for field in form_curriculum %}
+                            {% csrf_token %}
+                            <div class="col-lg-4 col-md-6 col-sm-12 div-input" style="padding-top: 15px">
+                                {{ field.label_tag }}
+                                {{ field }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <button type="submit">Sauvegarder</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="end-page" class="padding-bottom-50 padding-top-100">
+                <div class="container">
+                    <a href="/task_completed" class="primary-btn">J'ai terminé ma candidature</a>
+                    <a href="/logout" class="secondary-btn">Se Déconnecter</a>
+                </div>
+        </section>
+
+    </main>
+
+{% endblock content %}

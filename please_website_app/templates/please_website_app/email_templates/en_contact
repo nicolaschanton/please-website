@@ -1,0 +1,8 @@
+Contact : {{ first_name }} {{ last_name }}
+
+Email : {{ email }}
+
+Téléphone : {{ phone }}
+
+Message :
+{{ message|safe|striptags }}

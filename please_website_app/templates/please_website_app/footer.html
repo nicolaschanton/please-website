@@ -1,0 +1,59 @@
+{% load static %}
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 div-col">
+                <div>
+                    <img src="{% static 'please_website_app/img/logos/logo.png' %}" class="please-logo">
+                    <p class="p_footer_sub_logo">Please est une offre du groupe ENGIE</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/PleaseAppFR" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/pleaseappfr" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://twitter.com/pleaseapp" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/appplease" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 col- div-col">
+                <div>
+                    <p class="p_footer_title"><b>A propos</b></p>
+                    <p><a href="/">L'offre</a></p>
+                    <p><a href="/city_manager">City Manager</a></p>
+                    <p><a href="/collectivites">Collectivités</a></p>
+                    <p><a href="/commercants">Commerçants</a></p>
+                    <p><a href="/livreurs">Livreurs</a></p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 div-col">
+                <div>
+                    <p class="p_footer_title"><b>Please</b></p>
+                    <p><a href="/team">Notre équipe</a></p>
+                    <p><a href="mailto:anthony.aussanaire@engie.com">Contact Presse</a></p>
+                    <p><a href="/presse">On parle de nous</a></p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 div-col">
+                <div>
+                    <p class="p_footer_title"><b>Contact</b></p>
+                    <p><a href="mailto:contact@pleaseapp.com">Ecrivez-nous</a></p>
+                    <p><a href="https://www.facebook.com/PleaseAppFR" target="_blank">Facebook</a></p>
+                    <p><a href="https://www.instagram.com/pleaseappfr" target="_blank">Instagram</a></p>
+                    <p><a href="https://twitter.com/pleaseapp" target="_blank">Twitter</a></p>
+                    <p><a href="https://www.linkedin.com/company/appplease" target="_blank">LinkedIn</a></p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 div-col">
+                <div>
+                    <p class="p_footer_title"><b>Légal</b></p>
+                    <p><a href="{{ cgu.file.url }}" target="_blank">Mentions Légales</a></p>
+                    <a href="http://www.lafrenchtech.com" target="_blank"><img class="french_tech" src="{% static 'please_website_app/img/others/FT_logo-05.png' %}"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

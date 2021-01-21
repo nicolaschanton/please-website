@@ -1,0 +1,63 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Presse {% endblock title %}
+
+{% block content %}
+
+<section id="intro">
+    <div class="intro-content bckg-pink-490">
+        <h1>Espace Presse</h1>
+        <h3>Découvrez tous nos articles et parutions ! Vous êtes journaliste ? N'hésitez pas à nous contacter et à télécharger notre Dossier de Presse</h3>
+        <div>
+            <a href="{{ press_release.file.url }}" target="_blank" class="primary-btn">Téléchargez le Dossier de Presse</a>
+        </div>
+    </div>
+  </section>
+
+    <main id="main">
+
+        <section id="press" class="padding-bottom-100 padding-top-50">
+        <div class="container">
+        <h1>Revue de Presse</h1>
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-12">
+                    <div class="row">
+                        {% for article in articles %}
+                        <div class="col-lg-4 col-md-4 col-sm-6 padding-bottom-30">
+                            <div class="bckg-div-press">
+                                <a href="{{ article.link }}" target="_blank">
+                                    <img src="{{ article.logo_color.url }}" class="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="{{ article.link }}" target="_blank"><h2>{{ article.title }}</h2></a>
+                                <p>{{ article.abstract }}</p>
+                                <p style="padding-top: 10px"><a href="{{ article.link }}" target="_blank" style="text-decoration: underline">Lire la suite</a></p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <p class="p-bold"><b>Contact Presse</b></p>
+                    <p>Anthony Aussanaire</p>
+                    <p><i class="fa fa-address-card"></i> <a href="mailto:anthony.aussanaire@engie.com">anthony.aussanaire@engie.com</a></p>
+                    <p><i class="fa fa-mobile-phone"></i> <a href="tel:0647547166">06 47 54 71 66</a></p>
+                    <br>
+                    <p class="p-bold"><b>Outils Presse</b></p>
+                    <p><a href="{{ press_release.file.url }}" target="_blank">Dossier de Presse</a></p>
+                    <p><a href="{{ press_release_2.file.url }}" target="_blank">Communiqué de Presse</a></p>
+                    <p><a href="{{ press_kit.file.url }}" target="_blank">Kit Presse</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        {% block cta %}
+            {% include "please_website_app/cta.html" %}
+        {% endblock cta %}
+
+    </main>
+
+{% endblock content %}

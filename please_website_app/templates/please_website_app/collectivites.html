@@ -1,0 +1,151 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Collectivités {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+  <section id="intro">
+    <div class="intro-content bckg-pink-490">
+        <h1>Dynamisez l’économie de votre ville</h1>
+        <h3 class="white-pink">Proposez aux commerces locaux une vitrine digitale et un service de livraison</h3>
+
+        <div class="row carousel-intro">
+            {% for top_article in top_articles %}
+            <div class="col-lg-2 col-md-4 col-sm-4 padding-bottom-10">
+                <a href="{{ top_article.link }}" target="_blank">
+                    <img src="{{ top_article.logo_white.url }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div>
+            <a href="/contact_collectivite" class="primary-btn">Implanter Please dans ma ville</a>
+        </div>
+    </div>
+  </section>
+
+    <main id="main">
+
+        <section id="ccm-no-bckg">
+            <br>
+            <div class="container">
+                <h1>Un développement local</h1>
+                <h3>Proposez une vitrine digitale et une solution de livraison aux commerçants de
+                    votre ville et offrez de nouveaux services à vos citoyens.</h3>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle1-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>City Manager</b></p>
+                                <p>Un habitant de votre ville lance et développe son activité Please, aidez-le !</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle2-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>Commerçants et livreurs</b></p>
+                                <p>Le City Manager, accompagné par Please, référence l’offre des commerces interessés.
+                                    Il anime une communauté de livreurs.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle3-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>Développement local</b></p>
+                                <p>La vitrine digitale et la livraison proposées aux commerces
+                                    permettent ainsi de développer l’activité économique de proximité.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+        <section id="advantages">
+            <div class="container">
+                <h1>Une offre clés en main</h1>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_EUROS.png' %}">
+                            </div>
+                            <div>
+                                <h2>Economie digitale</h2>
+                                <p>Les nouveaux usages et modèles de consommation se développent avec les outils digitaux... Prenez part à cette nouvelle économie !</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/outremer-plein-rond_MOBILE.png' %}">
+                            </div>
+                            <div>
+                                <h2>Solution clés en main</h2>
+                                <p>Please offre une plateforme clés en main attrayante pour les clients finaux et
+                                    ergonomique pour les commerces et livreurs.</p>
+                            </div>
+                        </div>
+
+                         <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/rose-plein-rond_POI.png' %}">
+                            </div>
+                            <div>
+                                <h2>Dynamisme local</h2>
+                                <p>Vous soutenez une solution française en faveur des commerces locaux et vous contribuez
+                                    à dynamiser l’économie de votre ville.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/violet-plein-rond_ADMINISTRATION.png' %}">
+                            </div>
+                            <div>
+                                <h2>Fiscalité et Réglementation</h2>
+                                <p>Avec Please, une attention toute particulière est apportée aux aspects légaux et réglementaires
+                                     de l’offre : statut des livreurs, édition des factures...</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+        <section id="ccm-no-bckg-cta">
+            <br>
+            <div class="container">
+                <h1>Vous êtes interessé par la solution Please ?</h1>
+                <h3>N'hésitez pas à nous contacter pour discuter directement avec notre équipe</h3>
+            </div>
+            <div class="div-btn">
+                <a href="/contact_collectivite" class="primary-btn">Contactez nous</a>
+            </div>
+    </section>
+
+     <section id="video-background" class="padding-bottom-100">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HWDKl5jx4HE?rel=0&amp;controls=0&amp;showinfo=0&amp;start=3"></iframe>
+        </div>
+    </section>
+
+        {% block cta %}
+            {% include "please_website_app/cta.html" %}
+        {% endblock cta %}
+
+    </main>
+
+{% endblock content %}

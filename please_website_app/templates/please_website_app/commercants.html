@@ -1,0 +1,134 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Commerçants {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+  <section id="intro">
+    <div class="intro-content bckg-blue-490 padding-bottom-50">
+        <h1>Etendez votre clientèle et profitez d’un service de livraison</h1>
+        <h3>Ouvrez gratuitement votre vitrine digitale et augmentez vos revenus !</h3>
+        <div>
+            <a href="/contact_commercant" class="primary-btn">Contactez Please</a>
+        </div>
+    </div>
+  </section>
+
+    <main id="main" class="padding-top-40">
+
+        <section id="advantages">
+            <div class="container">
+                <h1>Vos produits sur Please, un boost pour votre business !</h1>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/outremer-plein-rond_MOBILE.png' %}">
+                            </div>
+                            <div>
+                                <h2>Vitrine digitale et solution de livraison</h2>
+                                <p>La présence de votre commerce sur Please étend naturellement
+                                    votre visibilité et votre périmètre client.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_BONHOMME.png' %}">
+                            </div>
+                            <div>
+                                <h2>Accompagnement dédié</h2>
+                                <p>Le City Manager de votre ville vous accompagne dans la mise en place de votre offre.
+                                    Il veille à la bonne livraison de vos produits.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/rose-plein-rond_CHRONOMETRE.png' %}">
+                            </div>
+                            <div>
+                                <h2>App Pro pour gérer votre activité</h2>
+                                <p>Votre compte dans l’App Pro vous permet de gérer l’ensemble de votre activité :
+                                    gestion de l’offre, suivi de vos commandes, édition de votre catalogue...</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_EUROS.png' %}">
+                            </div>
+                            <div>
+                                <h2>Commande et paiement en ligne</h2>
+                                <p>Vos clients peuvent régler simplement leurs achats en ligne (App et site web). Vous suivez vos recettes
+                                    et l’évolution de votre CA sur votre compte pro.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+    </section>
+
+        <section id="commerces" class="bckg-blue-685">
+            <div class="container">
+                <div class="row padding-bottom-50">
+                    <div class="col-lg-9 col-md-12 col-sm-12 padding-top-30 div-text">
+                        <h1 class="h1-line">Une App client</h1>
+                        <h1 class="h1-line">Un Site web marchand</h1>
+                        <h1 class="h1-line">Une App pro de gestion</h1>
+                        <br>
+                        <br>
+                        <h3>Une vitrine client dédiée, un service de livraison</h3>
+                        <p>Votre commerce est disponible dans l'App / Site Internet de votre ville.
+                            Vous proposez votre catalogue de produits.
+                            Vos clients peuvent commander et payer vos produits directement sans se déplacer.
+                            Vos clients peuvent décider de venir retirer vos produits sur place, ou se faire livrer.</p>
+
+                        <br>
+                        <h3>Une interface pro de gestion</h3>
+                        <p>Gestion des produits et services : création, édition, tarifs, détails, allergènes...
+                            Suivi et historique des commandes.
+                            Gestion manuelle ou automatique de votre planning d’ouverture .
+                            Accès direct par messagerie instantanée à votre City Manager Please.
+                            Suivi des recettes par période comptable.</p>
+
+                        <div id="social-badge" class="padding-top-50">
+                                <a href="http://onelink.to/pleaseapp" target="_blank">
+                                    <img src="{% static 'please_website_app/img/others/logo-apple.png' %}" class="pull-left">
+                                </a>
+                                <!-- android button -->
+                                <a href="http://onelink.to/pleaseapp" target="_blank">
+                                    <img src="{% static 'please_website_app/img/others/logo-googleplay.png' %}" class="pull-left">
+                                </a>
+                            </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 col-sm-12 div-phone">
+                        <img src="{% static 'please_website_app/img/others/photo-telephones.png' %}">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+        <section id="ccm-no-bckg-cta">
+            <br>
+            <div class="container">
+                <h1>Vous êtes interessé par la solution Please ?</h1>
+                <h3>N'hésitez pas à nous contacter pour discuter directement avec notre équipe</h3>
+            </div>
+            <div class="div-btn">
+                <a href="/contact_commercant" class="primary-btn">Ca m'intéresse !</a>
+            </div>
+        </section>
+
+        <section id="video-background" class="padding-bottom-50">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HWDKl5jx4HE?rel=0&amp;controls=0&amp;showinfo=0&amp;start=3"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+{% endblock content %}

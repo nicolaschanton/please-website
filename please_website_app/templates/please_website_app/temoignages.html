@@ -1,0 +1,47 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} City Manager {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+    <main id="main">
+
+        <section id="testimonials">
+            <br>
+            <div class="container">
+                <h1>Les City Managers témoignent</h1>
+                <h3>Nos City Managers développent leurs business et l’économie de leurs villes</h3>
+                <div class="div-col">
+                    <div class="row padding-bottom-30">
+                        {% for testimonial in testimonials %}
+
+                            <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                                <div class="div-img-list">
+                                    <img src="{{ testimonial.profile_picture.url }}">
+                                </div>
+                                <div>
+                                    <p class="p-subtitle"><b>{{ testimonial.partner_first_name }} {{ testimonial.partner_last_name }}</b></p>
+                                    <p class="p-sub-subtitle"><b>"{{ testimonial.city_name }}"</b></p>
+                                    <p>{{ testimonial.abstract }}</p>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+                <div class="div-btn">
+                    <a href="/devenir_cm" class="primary-btn">Devenir City Manager</a>
+                </div>
+                </div>
+            </div>
+    </section>
+
+    {% block cta %}
+            {% include "please_website_app/cta.html" %}
+    {% endblock cta %}
+
+    </main>
+
+{% endblock content %}

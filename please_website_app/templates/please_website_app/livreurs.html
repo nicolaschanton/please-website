@@ -1,0 +1,163 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Livreurs {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+  <section id="intro">
+    <div class="intro-content bckg-green-490">
+        <h1 class="hide-when-small" style="padding-bottom: 0; line-height: 0.8em">Please est dans votre ville ?</h1>
+        <h1>Faites des livraisons et augmentez vos revenus</h1>
+        <h3 class="white-green">Vous voulez devenir livreur à temps plein ou exercer votre activité ponctuellement ?
+            Contactez nous !</h3>
+        <div>
+            <a href="/contact_livreur" class="primary-btn">Je m'inscris</a>
+        </div>
+    </div>
+  </section>
+
+    <main id="main">
+
+        <section id="advantages">
+            <div class="container padding-top-50">
+                <h1>Les avantages d'un business indépendant</h1>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/rose-plein-rond_CHRONOMETRE.png' %}">
+                            </div>
+                            <div>
+                                <h2>Choix des horaires de travail</h2>
+                                <p> Vous disposez d’une application livreur qui vous permet de planifier et de suivre votre activité et vos horaires de travail.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/vert-plein-rond_EUROS.png' %}">
+                            </div>
+                            <div>
+                                <h2>Revenus à chaque livraison</h2>
+                                <p>Vous recevez un revenu à chaque livraison. Votre rémunération est claire et transparente.</p>
+                            </div>
+                        </div>
+
+                         <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/outremer-plein-rond_ADMINISTRATION.png' %}">
+                            </div>
+                            <div>
+                                <h2>Aide à la création de statut</h2>
+                                <p>Grâce au service BeRéglo, vous êtes accompagné dans la création de votre statut d’auto-entrepreneur et dans les aspects légaux de votre activité.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-col">
+                            <div class="div-col-2">
+                                <img src="{% static 'please_website_app/img/pictos/bleu-plein-rond_BONHOMME.png' %}">
+                            </div>
+                            <div>
+                                <h2>Indépendance</h2>
+                                <p>Vous avez toujours rêvé d'être votre propre patron ? Please vous permet de conserver votre autonomie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+        <section id="delivery-methods" class="bckg-green-490">
+            <div class="container padding-bottom-50">
+                <h1>Deux modes de livraison possibles</h1>
+
+                <div class="row padding-bottom-50">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="div-gradient">
+                            <img src="{% static 'please_website_app/img/pictos/picto-livreur-velo.png' %}">
+                            <h3>Vous avez un vélo et des heures libres</h3>
+                            <p>Vous êtes sérieux, ponctuel et avez envie de gagner des revenus à votre rythme ?
+                                En plus, Please vous aide dans la création de votre statut légal d’auto entrepreneur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="div-gradient">
+                            <img src="{% static 'please_website_app/img/pictos/picto-livreur-voiture.png' %}">
+                            <h3>Vous êtes un livreur pro en voiture</h3>
+                            <p>Vous êtes sérieux, ponctuel et avez envie de gagner des revenus à votre rythme ?
+                                Please vous permet d'augmenter vos revenus dans votre ville.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="ccm-no-bckg">
+            <br>
+            <div class="container">
+                <h1>Comment devenir livreur pour Please ?</h1>
+                <div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle1-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>Statut légal</b></p>
+                                <p>Vous créez votre statut d’auto-entrepreneur qui vous permet d’exercer votre nouvelle activité légalement.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle2-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>Livraison</b></p>
+                                <p>Vous planifiez vos horaires de travail et faites autant de livraison que vous le souhaitez.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                            <div>
+                                <img src="{% static 'please_website_app/img/pictos/ico-bulle3-grise.png' %}">
+                            </div>
+                            <div>
+                                <p class="p-subtitle"><b>Revenus</b></p>
+                                <p>Vous touchez une rémunération à chaque livraison effectuée.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+        <section id="ctaliv" class="bckg-green-400">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-12 col-sm-12 div-text padding-bottom-50">
+                            <h4>Être accompagné dans les obligations légales de votre activité</h4>
+                            <h3 class="white-green">Please propose le service BeRéglo pour vous aider dans la mise en place de votre statut légal et de votre protection sociale.</h3>
+                            <div>
+                                <a href="https://bereglo.fr" class="primary-btn" target="_blank">En savoir plus</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-12 col-sm-12">
+                            <div id="cta-phone">
+                                <img src="{% static 'please_website_app/img/others/photo-telephone-bereglo.png' %}">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </section>
+
+    </main>
+
+{% endblock content %}

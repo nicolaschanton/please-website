@@ -1,0 +1,34 @@
+{% load static %}
+
+<section id="cta" class="bckg-blue-400">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-12 col-sm-12">
+                            <h4>Vous voulez découvrir l’App côté client ?</h4>
+                            <h3>Recevez directement le lien de téléchargement par SMS</h3>
+                            <form method="POST" action="{% url 'merci' %}">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form_cta.as_p }}
+                                    <button type="submit">Recevoir mon lien par SMS</button>
+                                </div>
+                            </form>
+                            <div id="social-badge" class="padding-top-30">
+                                <a href="http://onelink.to/pleaseapp" target="_blank">
+                                    <img src="{% static 'please_website_app/img/others/logo-apple.png' %}" class="pull-left">
+                                </a>
+                                <!-- android button -->
+                                <a href="http://onelink.to/pleaseapp" target="_blank">
+                                    <img src="{% static 'please_website_app/img/others/logo-googleplay.png' %}" class="pull-left">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-12 col-sm-12">
+                            <div id="cta-phone">
+                                <img src="{% static 'please_website_app/img/others/please_phone.png' %}">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </section>

@@ -1,0 +1,25 @@
+Contact : {{ first_name }} {{ last_name }}
+
+Email : {{ email }}
+
+Téléphone : {{ phone }}
+
+Ville : {{ area }}
+
+Habitants : {{ inhabitants }}
+
+Densité (hab/km2) : {{ density }}
+
+Chômage : {{ unemployment }} %
+
+Immo Prix Moyen (€/m2) : {{ housing_price_average }} €
+
+Taux de Résidence Principale : {{ main_housing_rate }} %
+
+Taux de Résidence Vacante : {{ empty_housing_rate }} %
+
+Salaire Moyen Net : {{ net_salary_average }} €
+
+Nb Entreprises : {{ business_number }}
+
+Nb Commerces : {{ service_business_number }}

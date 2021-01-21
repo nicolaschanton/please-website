@@ -1,0 +1,64 @@
+{% load static %}
+
+<header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="/index"><img src="{% static 'please_website_app/img/logos/logo.png' %}" title="logo"/></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+
+            <li class="menu-has-children"><a href="#">Nos villes</a>
+
+                <ul>
+                    {% for city in cities %}
+                        <li><a href="/ville/{{ city.name }}">{{ city.name }}</a></li>
+                    {% endfor %}
+                </ul>
+
+            </li>
+
+            <li class="menu-has-children"><a href="#">City Manager</a>
+                <ul>
+                    <li><a href="/city_manager">Devenir City Manager</a></li>
+                    <li><a href="/temoignages">Ils l'ont fait !</a></li>
+                    <li><a href="/login">Espace Candidat</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-has-children"><a href="#">Collectivités</a>
+                <ul>
+                  <li><a href="/collectivites">Please au service des villes</a></li>
+                  <li><a href="/contact_collectivite">Nous contacter</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-has-children"><a href="#">Commerçants</a>
+                <ul>
+                  <li><a href="/commercants">Comment ça marche ?</a></li>
+                  <li><a href="/contact_commercant">Livrer avec Please</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-has-children"><a href="#">Livreurs</a>
+                <ul>
+                  <li><a href="/livreurs">Comment ça marche ?</a></li>
+                  <li><a href="/contact_livreur">Devenir Livreur</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-has-children"><a href="#">Please</a>
+                <ul>
+                    <li><a href="/team">Équipe</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
+                    <li><a href="/presse">Presse</a></li>
+                    <li><a href="/contact">Nous contacter</a></li>
+                </ul>
+            </li>
+
+        </ul>
+      </nav>
+    </div>
+</header>

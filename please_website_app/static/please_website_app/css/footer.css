@@ -1,0 +1,64 @@
+/*----------------------*/
+/* FOOTER */
+/*----------------------*/
+
+#footer {
+    background: transparent;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+#footer .div-col {
+    margin-top: 15px;
+}
+
+#footer p.p_footer_sub_logo {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #BDBDBD;
+    max-width: 50%;
+    padding-top: 10px;
+    line-height: 1.5em;
+}
+
+#footer p {
+    font-size: 12px;
+    color: #757575;
+    line-height: 8px;
+}
+
+#footer p.p_footer_title {
+    color: #2E2D2C;
+}
+
+#footer .social-links a {
+    color: #BDBDBD;
+    padding-right: 10px;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+#footer .social-links a:hover {
+    color: #FFC107;
+}
+
+#footer a {
+    color: #757575;
+    transition: 0.5s;
+}
+
+#footer a:hover, a:active, a:focus {
+    color: #FFC107;
+    outline: none;
+    text-decoration: none;
+}
+
+#footer img.french_tech {
+    max-height: 100px;
+}
+
+#footer img.please-logo {
+    max-width: 100px;
+}

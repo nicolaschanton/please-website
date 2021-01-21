@@ -1,0 +1,32 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Connexion City Manager {% endblock title %}
+
+{% block content %}
+
+    <main id="main">
+
+        <section id="form" class="padding-bottom-100">
+            <div class="container align-center">
+                <h1>Connexion</h1>
+                <h3>Connectez vous à votre espace candidat City Manager</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <form method="POST">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                </div>
+                                <button type="submit">Se connecter</button>
+                            </form>
+                            <a href="/devenir_cm" class="primary-btn login">Je n'ai pas encore de compte</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+{% endblock content %}

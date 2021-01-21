@@ -1,0 +1,44 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Jobs {% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+  <section id="intro">
+    <div class="intro-content bckg-purple-490">
+        <h1>Toutes nos offres d'emplois</h1>
+        <h3 class="white-purple-dark">Nous rassemblons une superbe équipe aux talents variés et à l'ambiance caliente. Allez, viens, on est bien chez Please !</h3>
+        <div>
+            <a href="/candidature" class="primary-btn">Déposez une candidature spontanée</a>
+        </div>
+    </div>
+  </section>
+
+
+  <main id="main">
+      <section id="jobs">
+          <div class="container padding-bottom-100 padding-top-50">
+               <div class="row">
+                    {% for job in jobs %}
+                        <div class="col-lg-6 col-md-6 col-sm-12 div-job">
+                            <h4 class="title">[{{ job.category }}] - {{ job.position }}</h4>
+                            <p>{{ job.position_type }} - {{ job.city }} ({{ job.country }})</p>
+                            <p class="description">{{ job.abstract }}</p>
+                            <div>
+                                <a href="mailto:contact@pleaseapp.com?subject=Candidature pour le poste de {{ job.position }}" class="primary-btn" target="_blank">C'est pour moi !</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+          </div>
+    </section>
+
+      {% block cta %}
+          {% include "please_website_app/cta.html" %}
+      {% endblock cta %}
+
+  </main>
+
+{% endblock content %}

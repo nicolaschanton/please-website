@@ -1,0 +1,19 @@
+{% load static %}
+
+<section id="cta2" class="bckg-green-400">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 padding-top-40">
+                            <h4>Découvrez l'App Please !</h4>
+                            <h3 class="white-green">Recevez directement le lien de téléchargement par SMS</h3>
+                            <form method="POST" action="{% url 'merci' %}">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {{ form_cta.as_p }}
+                                    <button type="submit">Recevoir mon lien par SMS</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+    </section>

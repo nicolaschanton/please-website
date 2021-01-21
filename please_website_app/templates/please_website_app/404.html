@@ -1,0 +1,26 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} 404 {% endblock title %}
+
+{% block content %} {% load static %}
+
+    <section id="intro">
+    <div class="intro-content bckg-404 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6"></div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <h1 style="color: #212121; text-align: left;">OOps!</h1>
+                    <h1 style="color: #212121; text-align: left;">Bon... ici visiblement il n'y a plus rien à se mettre sous la dent.</h1>
+
+                    <div style="text-align: left;">
+                        <a href="/" class="primary-btn">Essayez plutôt là</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+{% endblock content %}

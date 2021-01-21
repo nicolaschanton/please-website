@@ -1,0 +1,53 @@
+{% extends "please_website_app/base_site.html" %}
+
+{% block title %} Équipe {% endblock title %}
+
+{% block content %}
+
+  <section id="intro">
+    <div class="intro-content bckg-purple-490">
+        <h1>Découvrez notre équipe</h1>
+        <h3 class="white-purple-light">Nous construisons l'avenir de la #LocalTech</h3>
+        <div>
+            <a href="/jobs" class="primary-btn">Rejoindre l'équipe</a>
+        </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+      <section id="testimonials">
+            <br>
+            <div class="container">
+                <h1>Notre équipe</h1>
+                <div class="div-col">
+                    <div class="row padding-bottom-30">
+                        {% for member in team_members %}
+
+                            <div class="col-lg-4 col-md-12 col-sm-12 div-col">
+                                <div class="div-img-list">
+                                    <img src="{{ member.profile_picture.url }}">
+                                </div>
+                                <div>
+                                    <p class="p-subtitle"><b>{{ member.name }}</b></p>
+                                    <p class="p-sub-subtitle"><b>{{ member.role }}</b></p>
+                                    <div class="social-links">
+                                        <a href="mailto:{{ member.email }}" target="_blank" class="email"><i class="fa fa-address-card"></i></a>
+                                        <a href="{{ member.linkedin }}" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+                <div class="div-btn">
+                    <a href="/jobs" class="primary-btn">Nous rejoindre !</a>
+                </div>
+                </div>
+            </div>
+    </section>
+
+  </main>
+
+{% endblock content %}
